@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  Navigation
-//
-//  Created by MACBOOK on 07.06.2022.
-//
+
 
 import UIKit
 
@@ -27,27 +22,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let profile = UINavigationController(rootViewController: profileViewController)
         
         tabBarController.viewControllers = [feed, profile]
+        tabBarController.tabBar.backgroundColor = .white
         feed.tabBarItem.title = "Лента"
         feed.tabBarItem.image = UIImage(systemName: "house.fill")
         profile.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName:"person.fill"), tag: 1)
-        
-        
-        
+
+   
         
         window = UIWindow()
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
-
-        
-        
-        
-        
-        
+  
         
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+
 
     
 

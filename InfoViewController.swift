@@ -1,9 +1,4 @@
-//
-//  InfoViewController.swift
-//  Navigation
-//
-//  Created by MACBOOK on 07.06.2022.
-//
+
 
 import UIKit
 
@@ -21,10 +16,6 @@ class InfoViewController: UIViewController {
         alertButton.addTarget(self, action: #selector(alertTap), for: .touchUpInside)
         view.addSubview(alertButton)
         
-
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     @objc func alertTap() {

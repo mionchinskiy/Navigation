@@ -15,6 +15,8 @@
 		FA38659E284F689100EF95BF /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38659D284F689100EF95BF /* PostViewController.swift */; };
 		FA3865A0284F88B000EF95BF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38659F284F88B000EF95BF /* InfoViewController.swift */; };
 		FA3865A22850ADB100EF95BF /* PersonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */; };
+		FABF2CD728608DA300D64F93 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2CD628608DA300D64F93 /* LogInViewController.swift */; };
+		FABF2CD92860921300D64F93 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2CD82860921300D64F93 /* LogInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FA38659D284F689100EF95BF /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA38659F284F88B000EF95BF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHeaderView.swift; sourceTree = "<group>"; };
+		FABF2CD628608DA300D64F93 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FABF2CD82860921300D64F93 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */,
 				FA38659B284F67ED00EF95BF /* PersonViewController.swift */,
+				FABF2CD628608DA300D64F93 /* LogInViewController.swift */,
+				FABF2CD82860921300D64F93 /* LogInView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -154,8 +160,10 @@
 				FA38657E284F58D900EF95BF /* AppDelegate.swift in Sources */,
 				FA386598284F65AC00EF95BF /* FeedViewController.swift in Sources */,
 				FA38659C284F67ED00EF95BF /* PersonViewController.swift in Sources */,
+				FABF2CD728608DA300D64F93 /* LogInViewController.swift in Sources */,
 				FA3865A22850ADB100EF95BF /* PersonHeaderView.swift in Sources */,
 				FA3865A0284F88B000EF95BF /* InfoViewController.swift in Sources */,
+				FABF2CD92860921300D64F93 /* LogInView.swift in Sources */,
 				FA38659E284F689100EF95BF /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

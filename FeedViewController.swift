@@ -51,8 +51,8 @@ class FeedViewController: UIViewController {
     }
     
     @objc func pushToPublication() {
-        let publication = PostViewController()
-        navigationController?.pushViewController(publication, animated: true)
+        let postViewController = PostViewController()
+        navigationController?.pushViewController(postViewController, animated: true)
     }
 
 

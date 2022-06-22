@@ -76,9 +76,9 @@ class LogInViewController: UIViewController {
         NSLayoutConstraint.activate([scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
                                      scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
                                      scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                                     scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
-        
-        NSLayoutConstraint.activate([contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+                                     scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+                                     
+                                     contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
                                      contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
                                      contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
                                      contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),

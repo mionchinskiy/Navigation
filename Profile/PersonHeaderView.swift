@@ -9,9 +9,8 @@ class PersonHeaderView: UIView {
     lazy var button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.frame.size = CGSize(width: self.frame.width - 32, height: 50)
-        
         button.setTitle("Show status", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 4
@@ -25,6 +24,7 @@ class PersonHeaderView: UIView {
     
     lazy var name: UILabel = {
         let name = UILabel()
+        name.translatesAutoresizingMaskIntoConstraints = false
         name.text = "Евстигней Иммануилович"
         name.font = .systemFont(ofSize: 18, weight: .bold)
         name.textColor = .black
@@ -33,6 +33,7 @@ class PersonHeaderView: UIView {
     
     lazy var statusField: UITextField = {
         let statusField = UITextField()
+        statusField.translatesAutoresizingMaskIntoConstraints = false
         statusField.backgroundColor = .white
         statusField.font = .systemFont(ofSize: 15, weight: .regular)
         statusField.textAlignment = NSTextAlignment.center
@@ -46,6 +47,7 @@ class PersonHeaderView: UIView {
     
     lazy var status: UILabel = {
         let status = UILabel()
+        status.translatesAutoresizingMaskIntoConstraints = false
         status.text = "В ожидании чуда"
         status.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         status.textColor = .gray
@@ -54,6 +56,7 @@ class PersonHeaderView: UIView {
     
     lazy var image: UIImageView = {
         let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
         image.image = UIImage(named: "Кiт")
         image.layer.cornerRadius = 50
@@ -65,7 +68,7 @@ class PersonHeaderView: UIView {
     private var statusText = String()
     
     @objc func statusTextChanged (_ textField: UITextField) {
-        statusText = statusField.text!
+        statusText = statusField.text ?? "No data"
     }
          
     @objc func buttonPressed () {
@@ -81,29 +84,25 @@ class PersonHeaderView: UIView {
     }
     
     func setupConstraint() {
-        image.translatesAutoresizingMaskIntoConstraints = false
+
         NSLayoutConstraint.activate([image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      image.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
                                      image.widthAnchor.constraint(equalToConstant: 100),
-                                     image.heightAnchor.constraint(equalToConstant: 100)])
-        
-        name.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
+                                     image.heightAnchor.constraint(equalToConstant: 100),
+                                    
+                                     name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
                                      name.topAnchor.constraint(equalTo: self.topAnchor, constant: 32),
-                                     name.heightAnchor.constraint(equalToConstant: 18)])
+                                     name.heightAnchor.constraint(equalToConstant: 18),
         
-        status.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([status.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
-                                     status.topAnchor.constraint(equalTo: self.image.bottomAnchor, constant: -36)])
-        
-        statusField.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([statusField.leadingAnchor.constraint(equalTo: self.status.leadingAnchor),
+                                     status.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
+                                     status.topAnchor.constraint(equalTo: self.image.bottomAnchor, constant: -36),
+                                     
+                                     statusField.leadingAnchor.constraint(equalTo: self.status.leadingAnchor),
                                      statusField.topAnchor.constraint(equalTo: self.status.bottomAnchor, constant: 10),
                                      statusField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-                                     statusField.heightAnchor.constraint(equalToConstant: 40)])
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                                     statusField.heightAnchor.constraint(equalToConstant: 40),
+                                     
+                                     button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      button.topAnchor.constraint(equalTo: self.statusField.bottomAnchor, constant: 10),
                                      button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                                      button.heightAnchor.constraint(equalToConstant: 50)])

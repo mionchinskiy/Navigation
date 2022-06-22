@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		FA38657E284F58D900EF95BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38657D284F58D900EF95BF /* AppDelegate.swift */; };
 		FA386587284F58DD00EF95BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA386586284F58DD00EF95BF /* Assets.xcassets */; };
-		FA38658A284F58DD00EF95BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA386588284F58DD00EF95BF /* LaunchScreen.storyboard */; };
 		FA386598284F65AC00EF95BF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA386597284F65AC00EF95BF /* FeedViewController.swift */; };
 		FA38659C284F67ED00EF95BF /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38659B284F67ED00EF95BF /* PersonViewController.swift */; };
 		FA38659E284F689100EF95BF /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38659D284F689100EF95BF /* PostViewController.swift */; };
 		FA3865A0284F88B000EF95BF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38659F284F88B000EF95BF /* InfoViewController.swift */; };
 		FA3865A22850ADB100EF95BF /* PersonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */; };
+		FABF2CD728608DA300D64F93 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2CD628608DA300D64F93 /* LogInViewController.swift */; };
+		FABF2CD92860921300D64F93 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2CD82860921300D64F93 /* LogInView.swift */; };
+		FABF2CDD28612E2C00D64F93 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2CDC28612E2C00D64F93 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA38657A284F58D900EF95BF /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA38657D284F58D900EF95BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA386586284F58DD00EF95BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA386589284F58DD00EF95BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA38658B284F58DD00EF95BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA386597284F65AC00EF95BF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA38659B284F67ED00EF95BF /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonViewController.swift; path = Profile/PersonViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA38659D284F689100EF95BF /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA38659F284F88B000EF95BF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonHeaderView.swift; sourceTree = "<group>"; };
+		FABF2CD628608DA300D64F93 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FABF2CD82860921300D64F93 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		FABF2CDC28612E2C00D64F93 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,6 @@
 				FA386597284F65AC00EF95BF /* FeedViewController.swift */,
 				FA38657D284F58D900EF95BF /* AppDelegate.swift */,
 				FA386586284F58DD00EF95BF /* Assets.xcassets */,
-				FA386588284F58DD00EF95BF /* LaunchScreen.storyboard */,
 				FA38658B284F58DD00EF95BF /* Info.plist */,
 			);
 			path = Navigation;
@@ -76,7 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */,
+				FABF2CDC28612E2C00D64F93 /* PostTableViewCell.swift */,
 				FA38659B284F67ED00EF95BF /* PersonViewController.swift */,
+				FABF2CD628608DA300D64F93 /* LogInViewController.swift */,
+				FABF2CD82860921300D64F93 /* LogInView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -139,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA38658A284F58DD00EF95BF /* LaunchScreen.storyboard in Resources */,
 				FA386587284F58DD00EF95BF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,24 +159,16 @@
 				FA38657E284F58D900EF95BF /* AppDelegate.swift in Sources */,
 				FA386598284F65AC00EF95BF /* FeedViewController.swift in Sources */,
 				FA38659C284F67ED00EF95BF /* PersonViewController.swift in Sources */,
+				FABF2CD728608DA300D64F93 /* LogInViewController.swift in Sources */,
 				FA3865A22850ADB100EF95BF /* PersonHeaderView.swift in Sources */,
 				FA3865A0284F88B000EF95BF /* InfoViewController.swift in Sources */,
+				FABF2CD92860921300D64F93 /* LogInView.swift in Sources */,
 				FA38659E284F689100EF95BF /* PostViewController.swift in Sources */,
+				FABF2CDD28612E2C00D64F93 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FA386588284F58DD00EF95BF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA386589284F58DD00EF95BF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA38658C284F58DD00EF95BF /* Debug */ = {

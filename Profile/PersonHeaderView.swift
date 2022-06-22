@@ -91,25 +91,21 @@ class PersonHeaderView: UITableViewHeaderFooterView {
         NSLayoutConstraint.activate([image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      image.topAnchor.constraint(equalTo: self.topAnchor, constant: 2),
                                      image.widthAnchor.constraint(equalToConstant: 100),
-                                     image.heightAnchor.constraint(equalToConstant: 100)])
-        
-
-        NSLayoutConstraint.activate([name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
+                                     image.heightAnchor.constraint(equalToConstant: 100),
+                                     
+                                     name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
                                      name.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
-                                     name.heightAnchor.constraint(equalToConstant: 18)])
-        
-
-        NSLayoutConstraint.activate([status.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
-                                     status.topAnchor.constraint(equalTo: self.image.bottomAnchor, constant: -36)])
-        
-
-        NSLayoutConstraint.activate([statusField.leadingAnchor.constraint(equalTo: self.status.leadingAnchor),
+                                     name.heightAnchor.constraint(equalToConstant: 18),
+                                     
+                                     status.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
+                                     status.topAnchor.constraint(equalTo: self.image.bottomAnchor, constant: -36),
+                                     
+                                     statusField.leadingAnchor.constraint(equalTo: self.status.leadingAnchor),
                                      statusField.topAnchor.constraint(equalTo: self.status.bottomAnchor, constant: 10),
                                      statusField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-                                     statusField.heightAnchor.constraint(equalToConstant: 40)])
-        
-
-        NSLayoutConstraint.activate([button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                                     statusField.heightAnchor.constraint(equalToConstant: 40),
+                                     
+                                     button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      button.topAnchor.constraint(equalTo: self.statusField.bottomAnchor, constant: 10),
                                      button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                                      button.heightAnchor.constraint(equalToConstant: 50)])

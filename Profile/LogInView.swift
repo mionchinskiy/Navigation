@@ -76,25 +76,24 @@ class LogInView: UIView {
         NSLayoutConstraint.activate([logo.widthAnchor.constraint(equalToConstant: 100),
                                      logo.heightAnchor.constraint(equalToConstant: 100),
                                      logo.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 120),
-                                     logo.centerXAnchor.constraint(equalTo: self.centerXAnchor)])
-
-        NSLayoutConstraint.activate([backgroundForFields.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                                     logo.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+                                     
+                                     backgroundForFields.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      backgroundForFields.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                                      backgroundForFields.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 120),
-                                     backgroundForFields.heightAnchor.constraint(equalToConstant: 100)])
-        
-        NSLayoutConstraint.activate([phoneField.leadingAnchor.constraint(equalTo: backgroundForFields.leadingAnchor, constant: 16),
+                                     backgroundForFields.heightAnchor.constraint(equalToConstant: 100),
+                                     
+                                     phoneField.leadingAnchor.constraint(equalTo: backgroundForFields.leadingAnchor, constant: 16),
                                      phoneField.trailingAnchor.constraint(equalTo: backgroundForFields.trailingAnchor, constant: -16),
                                      phoneField.topAnchor.constraint(equalTo: backgroundForFields.topAnchor, constant: 2),
-                                     phoneField.bottomAnchor.constraint(equalTo: backgroundForFields.topAnchor, constant: 47.75)])
-        
-        
-        NSLayoutConstraint.activate([passwordField.leadingAnchor.constraint(equalTo: backgroundForFields.leadingAnchor, constant: 16),
+                                     phoneField.bottomAnchor.constraint(equalTo: backgroundForFields.topAnchor, constant: 47.75),
+                                     
+                                     passwordField.leadingAnchor.constraint(equalTo: backgroundForFields.leadingAnchor, constant: 16),
                                      passwordField.trailingAnchor.constraint(equalTo: backgroundForFields.trailingAnchor, constant: -16),
                                      passwordField.topAnchor.constraint(equalTo: backgroundForFields.topAnchor, constant: 52.25),
-                                     passwordField.bottomAnchor.constraint(equalTo: backgroundForFields.bottomAnchor, constant: -2.5)])
-        
-        NSLayoutConstraint.activate([logInButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+                                     passwordField.bottomAnchor.constraint(equalTo: backgroundForFields.bottomAnchor, constant: -2.5),
+                                     
+                                     logInButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      logInButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                                      logInButton.topAnchor.constraint(equalTo: backgroundForFields.bottomAnchor, constant: 16),
                                      logInButton.heightAnchor.constraint(equalToConstant: 50),

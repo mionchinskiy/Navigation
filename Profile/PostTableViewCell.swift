@@ -73,24 +73,15 @@ class PostTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//
-//        layout()
-//
-//        // Initialization code
-//    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
     
-//    func setupStatisticData() {
-//        postLikes.text = "Likes: \(numberOfLikes)"
-//        postViews.text = "Views: \(numberOfLikes)"
-//    }
+
     
     func layout() {
         

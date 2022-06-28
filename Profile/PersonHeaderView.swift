@@ -89,12 +89,12 @@ class PersonHeaderView: UITableViewHeaderFooterView {
         
 
         NSLayoutConstraint.activate([image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-                                     image.topAnchor.constraint(equalTo: self.topAnchor, constant: 2),
+                                     image.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
                                      image.widthAnchor.constraint(equalToConstant: 100),
                                      image.heightAnchor.constraint(equalToConstant: 100),
                                      
                                      name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
-                                     name.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
+                                     name.topAnchor.constraint(equalTo: self.topAnchor, constant: 32),
                                      name.heightAnchor.constraint(equalToConstant: 18),
                                      
                                      status.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
@@ -108,7 +108,8 @@ class PersonHeaderView: UITableViewHeaderFooterView {
                                      button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
                                      button.topAnchor.constraint(equalTo: self.statusField.bottomAnchor, constant: 10),
                                      button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
-                                     button.heightAnchor.constraint(equalToConstant: 50)])
+                                     button.heightAnchor.constraint(equalToConstant: 50),
+                                     button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)])
     }
     
 }

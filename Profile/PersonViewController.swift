@@ -13,7 +13,7 @@ class PersonViewController: UIViewController {
     }
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView.init(frame: .zero, style: .grouped)
+        let tableView = UITableView.init(frame: .zero, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
@@ -100,15 +100,11 @@ extension PersonViewController: UITableViewDelegate {
         
         let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PersonHeaderView") as! PersonHeaderView
         viewHeader.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: .zero)
-        
+
         viewHeader.addAllSubviews()
         viewHeader.setupConstraint()
 
         return viewHeader
-    }
-
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        206
     }
     
     

@@ -17,6 +17,7 @@ class PersonViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.contentInset = UIEdgeInsets(top: -22, left: .zero, bottom: .zero, right: .zero)
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
         tableView.register(PersonHeaderView.self, forHeaderFooterViewReuseIdentifier: "PersonHeaderView")
         return tableView

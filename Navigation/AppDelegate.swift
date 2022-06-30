@@ -2,7 +2,7 @@
 
 import UIKit
 
-@main
+ @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -11,7 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var tabBarController = UITabBarController()
     let feedViewController = FeedViewController()
-    let profileViewController = PersonViewController()
+
+    let logInViewController = LogInViewController()
 
 
     
@@ -19,15 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let feed = UINavigationController(rootViewController: feedViewController)
-        let profile = UINavigationController(rootViewController: profileViewController)
+        let profile = UINavigationController(rootViewController: logInViewController)
+        profile.navigationBar.isHidden = true
         
         tabBarController.viewControllers = [feed, profile]
-        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.backgroundColor = .systemGray4
+        tabBarController.tabBar.layer.borderWidth = 0.5
+        tabBarController.tabBar.layer.borderColor = UIColor.black.cgColor
         feed.tabBarItem.title = "Лента"
         feed.tabBarItem.image = UIImage(systemName: "house.fill")
         profile.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName:"person.fill"), tag: 1)
+        profile.tabBarItem.title = "Профиль"
 
-   
+
         
         window = UIWindow()
         window?.rootViewController = tabBarController
@@ -43,4 +48,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

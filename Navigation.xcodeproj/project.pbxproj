@@ -85,9 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				FA3865A12850ADB100EF95BF /* PersonHeaderView.swift */,
+				FA38659B284F67ED00EF95BF /* PersonViewController.swift */,
 				FABC3BEF286C91A600F44801 /* PhotosTableViewCell.swift */,
 				FABF2CDC28612E2C00D64F93 /* PostTableViewCell.swift */,
-				FA38659B284F67ED00EF95BF /* PersonViewController.swift */,
 				FABC3BF1286CAC0F00F44801 /* PhotosViewController.swift */,
 				FABC3BF3286CC71900F44801 /* PhotosCollectionViewCell.swift */,
 				FABF2CD628608DA300D64F93 /* LogInViewController.swift */,

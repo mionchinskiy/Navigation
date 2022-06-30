@@ -6,6 +6,7 @@ import UIKit
 
 class PersonHeaderView: UITableViewHeaderFooterView {
 
+
     lazy var button: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
@@ -66,7 +67,26 @@ class PersonHeaderView: UITableViewHeaderFooterView {
         return image
     }()
     
+    var avatarWidth = NSLayoutConstraint()
+    var avatarHeight = NSLayoutConstraint()
+    var avatarLeading = NSLayoutConstraint()
+    var avatarTop = NSLayoutConstraint()
+    
     private var statusText = String()
+    
+    override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
+        
+        addAllSubviews()
+        setupConstraint()
+        setupGesture()
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     @objc func statusTextChanged (_ textField: UITextField) {
         statusText = statusField.text ?? "No text"
@@ -86,12 +106,16 @@ class PersonHeaderView: UITableViewHeaderFooterView {
     }
     
     func setupConstraint() {
-        
 
-        NSLayoutConstraint.activate([image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-                                     image.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
-                                     image.widthAnchor.constraint(equalToConstant: 100),
-                                     image.heightAnchor.constraint(equalToConstant: 100),
+        avatarWidth = image.widthAnchor.constraint(equalToConstant: 100)
+        avatarHeight = image.heightAnchor.constraint(equalToConstant: 100)
+        avatarLeading = image.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16)
+        avatarTop = image.topAnchor.constraint(equalTo: self.topAnchor, constant: 16)
+        
+        NSLayoutConstraint.activate([avatarLeading,
+                                     avatarTop,
+                                     avatarWidth,
+                                     avatarHeight,
                                      
                                      name.leadingAnchor.constraint(equalTo: self.image.trailingAnchor, constant: 16),
                                      name.topAnchor.constraint(equalTo: self.topAnchor, constant: 32),
@@ -110,6 +134,23 @@ class PersonHeaderView: UITableViewHeaderFooterView {
                                      button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                                      button.heightAnchor.constraint(equalToConstant: 50),
                                      button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16)])
+    }
+    
+    func setupGesture() {
+        
+        let tapGesture = UITapGestureRecognizer(target: self , action: #selector(tapAvatar))
+        image.addGestureRecognizer(tapGesture)
+        
+        let tap2Gesture = UITapGestureRecognizer(target: self , action: #selector(tapAvatar))
+        name.addGestureRecognizer(tap2Gesture)
+        
+        
+    }
+    
+    @objc func tapAvatar () {
+        print("Есть нажатие!")
+//        avatarWidth.constant = 500
+//        avatarLeading.constant = 300
     }
     
 }

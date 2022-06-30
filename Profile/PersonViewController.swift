@@ -69,7 +69,7 @@ class PersonViewController: UIViewController {
                                      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)])
     }
     
-    
+
     
     
 }
@@ -107,8 +107,14 @@ extension PersonViewController: UITableViewDelegate {
         let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "PersonHeaderView") as! PersonHeaderView
         viewHeader.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: .zero)
 
-        viewHeader.addAllSubviews()
-        viewHeader.setupConstraint()
+//        viewHeader.addAllSubviews()
+//        viewHeader.setupConstraint()
+//        viewHeader.setupGesture()
+        
+//        let tapGesture = UITapGestureRecognizer(target: self , action: #selector(viewHeader.tapAvatar))
+//        viewHeader.image.addGestureRecognizer(tapGesture)
+
+
 
         return viewHeader
     }
@@ -122,5 +128,6 @@ extension PersonViewController: UITableViewDelegate {
             let _: Int
         }
     }
+    
     
 }

@@ -19,6 +19,7 @@ class PersonViewController: UIViewController {
         tableView.delegate = self
         tableView.contentInset = UIEdgeInsets(top: -22, left: .zero, bottom: .zero, right: .zero)
         tableView.register(PostTableViewCell.self, forCellReuseIdentifier: "PostTableViewCell")
+        tableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: "PhotosTableViewCell")
         tableView.register(PersonHeaderView.self, forHeaderFooterViewReuseIdentifier: "PersonHeaderView")
         return tableView
     }()
@@ -53,9 +54,6 @@ class PersonViewController: UIViewController {
     }()
 
     
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
@@ -79,17 +77,24 @@ class PersonViewController: UIViewController {
 extension PersonViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        postsArray.count
+        postsArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
-        cell.postAuthor.text = postsArray[indexPath.row].author
-        cell.postImage.image = UIImage(named: postsArray[indexPath.row].image)
-        cell.postDescription.text = postsArray[indexPath.row].description
-        cell.postLikes.text = "Likes: \(String(postsArray[indexPath.row].likes))"
-        cell.postViews.text = "Views: \(String(postsArray[indexPath.row].views))"
-        return cell
+        let galleryCell = tableView.dequeueReusableCell(withIdentifier: "PhotosTableViewCell", for: indexPath) as! PhotosTableViewCell
+        switch indexPath.row {
+        case 0 :
+            return galleryCell
+        default:
+            cell.postAuthor.text = postsArray[indexPath.row - 1].author
+            cell.postImage.image = UIImage(named: postsArray[indexPath.row - 1].image)
+            cell.postDescription.text = postsArray[indexPath.row - 1].description
+            cell.postLikes.text = "Likes: \(String(postsArray[indexPath.row - 1].likes))"
+            cell.postViews.text = "Views: \(String(postsArray[indexPath.row - 1].views))"
+            return cell
+        }
+
     }
     
     
@@ -108,6 +113,14 @@ extension PersonViewController: UITableViewDelegate {
         return viewHeader
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let galleryController = PhotosViewController()
+            navigationController?.pushViewController(galleryController, animated: true)
+        default:
+            let _: Int
+        }
+    }
     
 }

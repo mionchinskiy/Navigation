@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         feed.tabBarItem.title = "Лента"
         feed.tabBarItem.image = UIImage(systemName: "house.fill")
         profile.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName:"person.fill"), tag: 1)
+        profile.tabBarItem.title = "Профиль"
 
 
         
